@@ -18,10 +18,10 @@ script:
 - widdershins --search true --language_tabs 'shell:cURL' 'javascript--nodejs:Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary tomox-sdk.yaml -o tomox-sdk.md
 - widdershins --search true --language_tabs 'shell:cURL' 'javascript--nodejs:Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary scan.yaml -o scan.md
 - widdershins --search true --language_tabs 'shell:cURL' 'javascript--nodejs:Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary master.yaml -o master.md
-- tail -n +16 rpc.md > tmp.md && mv tmp.md rpc.md
-- tail -n +16 scan.md > tmp.md && mv tmp.md scan.md
-- tail -n +16 master.md > tmp.md && mv tmp.md master.md
-- tail -n +16 tomox-sdk.md > tmp.md && mv tmp.md tomox-sdk.md
+- tail -n +18 rpc.md > tmp.md && mv tmp.md rpc.md
+- tail -n +18 scan.md > tmp.md && mv tmp.md scan.md
+- tail -n +18 master.md > tmp.md && mv tmp.md master.md
+- tail -n +18 tomox-sdk.md > tmp.md && mv tmp.md tomox-sdk.md
 - cat index.md rpc.md tomox-sdk.md scan.md master.md > source/index.html.md
 - node shins.js
 - node buildstyle.js
