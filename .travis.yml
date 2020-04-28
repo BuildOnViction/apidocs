@@ -14,11 +14,10 @@ script:
 - curl https://raw.githubusercontent.com/tomochain/tomoscan/master/server/src/docs/swagger.yml -o scan.yaml
 - curl https://raw.githubusercontent.com/tomochain/tomox-sdk/master/swaggerui/swagger.yaml -o tomox-sdk.yaml
 - curl https://raw.githubusercontent.com/tomochain/tomomaster/master/docs/swagger.yml -o master.yaml
-- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary rpc.yaml -o rpc.md
-- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary tomox-sdk.yaml -o tomox-sdk.md
-- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary scan.yaml -o scan.md
-- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary master.yaml -o master.md
-- cat rpc.md
+- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node: Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary rpc.yaml -o rpc.md
+- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node: Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary tomox-sdk.yaml -o tomox-sdk.md
+- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node: Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary scan.yaml -o scan.md
+- widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node: Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary master.yaml -o master.md
 - tail -n +24 rpc.md > tmp.md && mv tmp.md rpc.md
 - tail -n +24 scan.md > tmp.md && mv tmp.md scan.md
 - tail -n +24 master.md > tmp.md && mv tmp.md master.md
