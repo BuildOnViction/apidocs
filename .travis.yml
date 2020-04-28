@@ -18,6 +18,7 @@ script:
 - widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary tomox-sdk.yaml -o tomox-sdk.md
 - widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary scan.yaml -o scan.md
 - widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'node:Node.js' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary master.yaml -o master.md
+- cat rpc.md
 - tail -n +24 rpc.md > tmp.md && mv tmp.md rpc.md
 - tail -n +24 scan.md > tmp.md && mv tmp.md scan.md
 - tail -n +24 master.md > tmp.md && mv tmp.md master.md
