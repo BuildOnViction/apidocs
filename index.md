@@ -9,7 +9,7 @@ language_tabs:
   - java: Java
 language_clients:
   - shell: ""
-  - javascript--nodejs: ""
+  - node: ""
   - go: ""
   - ruby: ""
   - python: ""
