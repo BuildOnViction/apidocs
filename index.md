@@ -2,7 +2,7 @@
 title: TomoChain JSON-RPC APIs
 language_tabs:
   - shell: cURL
-  - javascript--nodejs: Node.JS
+  - node: Node.JS
   - go: GO
   - ruby: Ruby
   - python: Python
