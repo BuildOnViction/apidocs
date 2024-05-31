@@ -10,9 +10,9 @@ install:
 - npm install -g widdershins@4.0.1
 
 script:
-- curl https://raw.githubusercontent.com/tomochain/rpc-swagger/master/swagger.yaml -o rpc.yaml
-- curl https://raw.githubusercontent.com/tomochain/tomoscan/master/server/src/docs/swagger.yml -o scan.yaml
-- curl https://raw.githubusercontent.com/tomochain/tomomaster/master/docs/swagger.yml -o master.yaml
+- curl https://raw.githubusercontent.com/BuildOnViction/rpc-swagger/master/swagger.yaml -o rpc.yaml
+- curl https://raw.githubusercontent.com/BuildOnViction/tomoscan/master/server/src/docs/swagger.yml -o scan.yaml
+- curl https://raw.githubusercontent.com/BuildOnViction/tomomaster/master/docs/swagger.yml -o master.yaml
 - widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node:Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary rpc.yaml -o rpc.md
 - widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node:Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary scan.yaml -o scan.md
 - widdershins --httpsnippet true --expandBody true --search true --language_tabs 'shell:cURL' 'javascript--node:Node.JS' 'go:GO' 'ruby:Ruby' 'python:Python' 'java:Java' --summary master.yaml -o master.md
@@ -25,9 +25,9 @@ script:
 
 deploy:
   provider: pages
-  skip_cleanup: true
+  skip_cleanup: false
   github-token: $GH_TOKEN
-  repo: tomochain/apidocs
+  repo: BuildOnViction/apidocs
   local-dir: .
   target-branch: gh-pages
   fqdn: apidocs.tomochain.com
